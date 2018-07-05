@@ -18,21 +18,21 @@ class Block:
 	def next(data, last_block):
 		return Block(last_block.hash, data)
 		
+		
 blocks = int(input("Enter no of blocks:"))
 
-b = Block("0", "Genesis block Author: Vikram Kumar")
+b = Block("0", "Genesis block, Author: Vikram Kumar")
 
 blockchain = []
 blockchain.append(b)
 
 for i in range(blocks):
 	print("Enter data of block %d:"% i)
-	data = input()
 	
+	data = input()
 	previous = b
 	
-	b = Block.next(data, previous)
-		
+	b = Block.next(data, previous)	
 	blockchain.append(b)
 	
 	
